@@ -17,7 +17,7 @@ on:
 
 env:
   # github.repository as <account>/<repo>
-  IMAGE_NAME: jenkins-agent
+  IMAGE_NAME: centos-idmap
 
 jobs:
   build:
