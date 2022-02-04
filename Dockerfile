@@ -13,4 +13,10 @@ FROM registry.access.redhat.com/ubi8-minimal
 COPY --from=img     /usr/bin/img /usr/bin/img
 COPY --from=build   /usr/bin/newuidmap /usr/bin/newuidmap
 COPY --from=build   /usr/bin/newgidmap /usr/bin/newgidmap
+
 COPY --from=build   /usr/bin/lftp /usr/bin/lftp
+COPY --from=build   /lib64/lftp   /lib64/lftp
+COPY --from=build   /lib64/liblftp-jobs.so.0        /lib64/liblftp-jobs.so.0
+COPY --from=build   /lib64/liblftp-jobs.so.0.0.0    /lib64/liblftp-jobs.so.0.0.0
+COPY --from=build   /lib64/liblftp-tasks.so.0       /lib64/liblftp-tasks.so.0
+COPY --from=build   /lib64/liblftp-tasks.so.0.0.0   /lib64/liblftp-tasks.so.0.0.0
