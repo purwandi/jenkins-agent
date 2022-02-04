@@ -1,6 +1,6 @@
 FROM r.j3ss.co/img as img
 
-FROM centos:8 as build
+FROM rockylinux:8 as build
 RUN yum install -y autoconf automake gcc gcc-c++ make byacc gettext gettext-devel gcc git libtool libxslt
 RUN git clone https://github.com/shadow-maint/shadow.git /shadow
 WORKDIR /shadow
